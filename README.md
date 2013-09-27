@@ -91,8 +91,11 @@ You can do what any do you want in here! like split file set to compress!
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+#### Default use
+下面的例子是一些基本的设置跟压缩使用方法. `concat`与`uglify`的使用方法可以调整!  
+应该根据不同模式，配置`concat`与`uglify`两个任务!  
+
+This Examples is the basic config to compress method, you can config the `concat` and `uglify` task in different mode!  
 
 ```js
 grunt.initConfig({
