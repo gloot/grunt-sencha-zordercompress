@@ -1,6 +1,9 @@
 # grunt-sencha-zordercompress
 
+### English description!
 > Compress compile sencha by order Loaded javascript files!
+
+### 中文说明
 > 按顺序压缩指定Sencha加载的脚本文件!
 
 ## Getting Started
