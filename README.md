@@ -1,6 +1,7 @@
-# Sencha_ZOrderCompress
+# grunt-sencha-zordercompress
 
 > Compress compile sencha by order Loaded javascript files!
+> 按顺序压缩指定Sencha加载的脚本文件!
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
