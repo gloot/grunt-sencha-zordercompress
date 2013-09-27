@@ -104,7 +104,7 @@ grunt.initConfig({
 			options: {
 				appJs : 'app.js',
 				processHtml : 'index.html',
-				appName : 'Rwxf',
+				appName : 'projName',
 				mode : 'APP_APPJS_ADKCOMS' 
 					/*
 						1. APP_APPJS_ADKCOMS		=>app/, app.js, adk+components
@@ -148,6 +148,11 @@ grunt.initConfig({
 	}
 })
 ```
+
+#### 其他说明 Other notes
+ 可以通过 options.modeFunc方法，处理 `apps` 生成其他的配置集.  
+ You can use options.modeFunc method, do any what you want with `apps` files;  
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
