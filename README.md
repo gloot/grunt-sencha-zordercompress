@@ -4,22 +4,23 @@
 > Compress compile sencha by order Loaded javascript files!
 
 ### 中文说明
-> 按顺序压缩指定Sencha加载的脚本文件, 可以选择多种模式压缩;
-'
-grunt-sencha-zordercompress分按需压缩与全压缩两种方式;
-'
-每种方式下又可以分：
-1. APP_APPJS_ADKCOMS : 压缩两份: apps/下的文件, 以及 sdk+components的文件
-'
-2. APP_APPJS_ADK_COMS : 压缩三份 : apps/下的文件, 以及 sdk文件 和 components文件三部分.
-'
-所有配置出来的可压缩项为:
-'
-全压缩: '<%=Sencha_ZOrderCompress_dist%>'
-'
-组件或组件加sdk: '<%=Sencha_ZOrderCompress_dist_ext_core%>'
-'
-apps/下文件压缩: '<%=Sencha_ZOrderCompress_dist_apps%>'
+> 按顺序压缩指定Sencha加载的脚本文件, 可以选择多种模式压缩;  
+
+grunt-sencha-zordercompress分按需压缩与全压缩两种方式;  
+
+每种方式下又可以分：  
+1. APP_APPJS_ADKCOMS : 压缩两份: apps/下的文件, 以及 sdk+components的文件  
+
+2. APP_APPJS_ADK_COMS : 压缩三份 : apps/下的文件, 以及 sdk文件 和 components文件三部分.  
+
+所有配置出来的可压缩项为:   
+
+全压缩: '<%=Sencha_ZOrderCompress_dist%>'  
+
+组件或组件加sdk: '<%=Sencha_ZOrderCompress_dist_ext_core%>'  
+
+apps/下文件压缩: '<%=Sencha_ZOrderCompress_dist_apps%>'  
+
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
