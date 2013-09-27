@@ -56,19 +56,38 @@ grunt.initConfig({
 })
 ```
 
-### Options
+### options
 
 #### options.appJs
 Ext.application执行所在程序, 一般为 `' app.js '`  
 The file where Ext.applicaton performs!  
 
-A string value that is used to do something with whatever.
+#### options.processHtml
+Sencha touch执行入口, 默认为 `'index.html'`  
+The Sencha application perform file!  
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
+### options.appName
+在执行全压缩方式时，设置 appJs 脚本内容所需的配置!  
+In all compress type, will generates an executable file ,contains appJs content , need to use appName!  
 
-A string value that is used to do something else with whatever else.
+### options.mode
+压缩方式  
+compress type  
+
+全压缩: `'<%=Sencha_ZOrderCompress_dist%>'`  
+组件或组件加sdk: `'<%=Sencha_ZOrderCompress_dist_ext_core%>'`  
+apps/下文件压缩: `'<%=Sencha_ZOrderCompress_dist_apps%>'`  
+
+### options.compassAll [true|false]
+配置是否全压缩，还是按需压缩;  
+config is compress all Sencha components: All:true;  
+
+### options.moduFunc
+这个方法有个参数，是 `'app/'` 下所有脚本文件的数组!  
+可用于再 这些文件进行再操作，比如如何分隔细分再压缩!  
+
+This method[function] has a parameter, A array from `'app/'` all files!  
+You can do what any do you want in here! like split file set to compress!
 
 ### Usage Examples
 
@@ -77,29 +96,53 @@ In this example, the default options are used to do something with whatever. So 
 
 ```js
 grunt.initConfig({
-  Sencha_ZOrderCompress: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  Sencha_ZOrderCompress: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+	Sencha_ZOrderCompress: {
+		dist: {
+			options: {
+				appJs : 'app.js',
+				processHtml : 'index.html',
+				appName : 'Rwxf',
+				mode : 'APP_APPJS_ADKCOMS' 
+					/*
+						1. APP_APPJS_ADKCOMS		=>app/, app.js, adk+components
+						2. APP_APPJS_ADK_COMS		=>app/, app.js, adk.js, components[touch/src]
+						3. ALL				=>app/+app.js+adk.js+components[touch/src]
+					*/,
+				compassAll : true,
+				modeFunc : function(apps) {
+					var modus = ['amodu', 'bmodu'];
+				}
+			}
+		},
+		src : 'touch/src/**/*.js'
+	},	
+	concat: {
+		dist: {
+			src : '<%= Sencha_ZOrderCompress_dist_ext_core %>',
+			dest: 'build/components.js'
+		},
+		foo: {
+			src : '<%= Sencha_ZOrderCompress_dist_apps %>',
+			dest : 'build/apps.js',
+		},
+		pall: {
+			src : '<%= Sencha_ZOrderCompress_dist %>',
+			dest : 'build/alls.js'
+		}
+	},
+	uglify : {
+		build : {
+			src : 'build/components.js',
+			dest : 'build/components.min.js'
+		},
+		dist : {
+			files: {
+				'build/sencha.min.js':'touch/sencha-touch.js',
+				'build/apps.min.js' : 'build/apps.js',
+				'build/alls.min.js' : 'build/alls.js'
+			}
+		}
+	}
 })
 ```
 
