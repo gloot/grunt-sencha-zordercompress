@@ -8,10 +8,11 @@
 
 grunt-sencha-zordercompress分按需压缩与全压缩两种方式;  
 
-每种方式下又可以分：  
-1. APP_APPJS_ADKCOMS : 压缩两份: apps/下的文件, 以及 sdk+components的文件  
+每种方式下又可以分： 
 
+1. APP_APPJS_ADKCOMS : 压缩两份: apps/下的文件, 以及 sdk+components的文件  
 2. APP_APPJS_ADK_COMS : 压缩三份 : apps/下的文件, 以及 sdk文件 和 components文件三部分.  
+3. 每种模式都可以全压缩  
 
 所有配置出来的可压缩项为:   
 
