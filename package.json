@@ -1,7 +1,7 @@
 {
   "name": "grunt-sencha-zordercompress",
   "description": "Compress compile sencha by order Loaded javascript files!",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "http://www.cmszu.com",
   "author": {
     "name": "Gloot/ZWD",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Administrator/grunt-sencha-zordercompress.git"
+    "url": "git://github.com/gloot/grunt-sencha-zordercompress.git"
   },
   "bugs": {
-    "url": "https://github.com/Administrator/grunt-sencha-zordercompress/issues"
+    "url": "https://github.com/gloot/grunt-sencha-zordercompress/issues"
   },
   "licenses": [
     {
