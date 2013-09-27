@@ -1,7 +1,7 @@
 # grunt-sencha-zordercompress
 
 ### English description!
-> Compress compile sencha by order Loaded javascript files!
+> Compress compile sencha by Loaded order Ext javascript files!
 
 ### 中文说明
 > 按顺序压缩指定Sencha加载的脚本文件, 可以选择多种模式压缩;  
@@ -46,21 +46,21 @@ In your project's Gruntfile, add a section named `Sencha_ZOrderCompress` to the 
 ```js
 grunt.initConfig({
   Sencha_ZOrderCompress: {
-    options: {
-      // Task-specific options go here.
+    dist: {
+	options: {
+		
+	}
     },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    src : 'sencha components path, eg: touch/src/**/*.js '
   },
 })
 ```
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+#### options.appJs
+Ext.application执行所在程序, 一般为 `' app.js '`  
+The file where Ext.applicaton performs!  
 
 A string value that is used to do something with whatever.
 
